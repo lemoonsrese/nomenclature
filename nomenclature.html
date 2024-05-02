@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>nomendeclature.com</title>
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<script type="text/javascript" src="https://unpkg.com/webcam-/deasyist/webcam-easy.min.js"></script>
+
+<style>
+
+a {
+padding: 10px;
+background-color: #6495ED;
+color: white;
+text-decoration: none;
+}
+
+canvas {
+display: none;
+}
+</style>
+</head>
+
+<body>
+<center>
+<iframe src ="http://192.168.254.100/default.asp" width="100%" height="800"></iframe>"
+<canvas id="canvas"></canvas>
+<a download onClick="takeAPicture()">SNAP</a>
+</center>
+
+<SCRIPT language=JavaScript>
+if ((navigator.appName == "Microsoft Internet Explorer")&&(navigator.platform != "MacPPC"))
+{
+document.write("<OBJECT ID=\"VAtCtrl\" WIDTH=362 HEIGHT=310 name=\"VAtCtrl\"");
+document.write(" CLASSID=CLSID:210D0CBC-8B17-48D1-B294-1A338DD2EB3A");
+document.write(" CODEBASE=\"http://60.248.39.149:1025/VatDec.cab#version=1,0,0,48\">");
+document.write("<PARAM NAME=\"Url\" VALUE=\"http:///cgi-bin/control.cgi\">");
+document.write("<PARAM NAME=\"VSize\" VALUE=\"SIF\">");
+document.write("<PARAM NAME=\"Language\" VALUE=\"en\">");
+document.write("<PARAM NAME=\"Deblocking\" VALUE=\"true\">");
+document.write("<PARAM NAME=\"DisplayTimeFormat\" VALUE=\"1\">");
+document.write("<PARAM NAME=\"DigitalZoomEnableChk\" VALUE=\"true\">");
+document.write("<PARAM NAME=\"DigitalZoomEdit\" VALUE=\"true\">");
+document.write("</OBJECT>");
+}
+</SCRIPT>
+<script>
+function takeAPicture() {
+}
+let picture =webcam.snap();
+document.querySelector("a").href = picture;
+</script>
+
+</script>
+</body>
+<body bgcolor="#89CFF0"></body>
+</html>
